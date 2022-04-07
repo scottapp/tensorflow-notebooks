@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+cnn_cats_and_dogs/original/
+cnn_cats_and_dogs/tmp/
+
