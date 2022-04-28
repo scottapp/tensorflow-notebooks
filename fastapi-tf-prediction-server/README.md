@@ -1,7 +1,11 @@
-# FastAPI Tensorflow Prediction Server
+# Tensorflow Prediction Server With FastAPI
+
+A tensorflow prediction server implemented with FastAPI framework
+
+Can be easily deployed to GCP Cloud Run
 
 
-### Run some simple test after downloading
+### Run some simple test after cloning
 ```bash
 pytest
 ```
