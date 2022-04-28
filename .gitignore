@@ -128,5 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-gcp-custom-ai-models/
 topic_classification_stackoverflow_multi_label/
