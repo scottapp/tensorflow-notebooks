@@ -15,7 +15,7 @@ class CustomModelPrediction(object):
 
     def predict(self, instances, **kwargs):
         preprocessed_data = self._processor.transform(instances)
-        predictions =  self._model.predict(preprocessed_data)
+        predictions = self._model.predict(preprocessed_data)
         labels = self._postprocess(predictions)
         return labels
 
