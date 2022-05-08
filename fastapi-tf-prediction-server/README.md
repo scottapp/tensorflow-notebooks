@@ -2,6 +2,7 @@
 
 - A tensorflow prediction server implemented with FastAPI framework
 - Model is from [this google tutorial](https://cloud.google.com/ai-platform/docs/getting-started-keras)
+- The notebook is [here](https://github.com/scottapp/tensorflow-notebooks/blob/main/fastapi-tf-prediction-server/income_prediction_us_census_data.md)
 - Uses the United States Census Income Dataset
 - Can be easily deployed to GCP Cloud Run
 
