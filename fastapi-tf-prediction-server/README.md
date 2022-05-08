@@ -1,8 +1,9 @@
 # Tensorflow Prediction Server With FastAPI
 
-A tensorflow prediction server implemented with FastAPI framework
-
-Can be easily deployed to GCP Cloud Run
+- A tensorflow prediction server implemented with FastAPI framework
+- Model is from [this google tutorial](https://cloud.google.com/ai-platform/docs/getting-started-keras)
+- Uses the United States Census Income Dataset
+- Can be easily deployed to GCP Cloud Run
 
 
 ### Run some simple test after cloning
