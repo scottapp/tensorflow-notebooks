@@ -1,12 +1,12 @@
-# Kaggle Auto MPG Model Deployed to Google Vertex AI
+# Predict Fuel Efficiency And Deploy to Google Vertex AI
 
-This repo demonstrates the use of custom container to train an AI model and deploy the model to GCP Vertex AI after training
+- This repo demonstrates the use of custom container to train an AI model and deploy the model to GCP Vertex AI after training
+- Based on the classic Auto MPG dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/).
+- The tutorial on Google is [here](https://www.tensorflow.org/tutorials/keras/regression)
+- First you will need to create a training and deployment pipeline project in the GCP Vertex AI console.
+- Then you can build, run and push the docker image in the repo to GCP for training and then deploy to an end point.
+- After an end point is deployed, you can test the model by running run_predictions.py. 
 
-First you will need to create a training and deployment pipeline project in the GCP Vertex AI console.
-
-Then you can build, run and push the docker image in the repo to GCP for training and then deploy to an end point.
-
-After an end point is deployed, you can test the model by running run_predictions.py. 
 
 ### Set environment variable
 ```bash
