@@ -196,6 +196,7 @@ def clean_data_02(info, df, df_test):
     df['GarageYrBlt'].fillna(0, inplace=True)
     df_test['GarageYrBlt'].fillna(0, inplace=True)
 
+    """
     OverallQualCond = {
         10: "Very Excellent",
         9: "Excellent",
@@ -210,6 +211,7 @@ def clean_data_02(info, df, df_test):
     }
     df.replace({"OverallQual": OverallQualCond}, inplace=True)
     df_test.replace({"OverallQual": OverallQualCond}, inplace=True)
+    """
 
     # fill all other null with None
     df.fillna("None", inplace=True)
