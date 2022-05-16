@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 
+"""
 import tensorflow as tf
 from tensorflow import keras
 from keras.models import Sequential
@@ -11,6 +12,7 @@ from keras.callbacks import EarlyStopping # Early Stopping Callback in the NN
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import IsolationForest
 from sklearn.linear_model import Ridge, HuberRegressor, LinearRegression
+"""
 from sklearn.preprocessing import OneHotEncoder
 import matplotlib.pyplot as plt
 
@@ -27,6 +29,8 @@ def one_hot_encode_categorical_cols(df, cols, enc=None, drop=True):
     arry = enc.transform(df[cols]).toarray()
     cat_columns = enc.get_feature_names_out(cols)
     tmp_df = pd.DataFrame(arry, columns=cat_columns)
+
+    df.reset_index(inplace=True, drop=True)
     df = pd.concat([df, tmp_df], axis=1)
 
     """
