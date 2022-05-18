@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 topic_classification_stackoverflow_multi_label/
+jpx_stock_prediction/
