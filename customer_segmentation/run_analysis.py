@@ -20,22 +20,9 @@ sns.set_style('darkgrid')
 
 
 def kmeans_plot_cluster_silscore(dataset, start=2, end=11):
-    '''
-    Calculate the optimal number of kmeans
-
-    INPUT:
-        dataset : dataframe. Dataset for k-means to fit
-        start : int. Starting range of kmeans to test
-        end : int. Ending range of kmeans to test
-    OUTPUT:
-        Values and line plot of Silhouette Score.
-    '''
-
-    # Create empty lists to store values for plotting graphs
     cluster_list = []
     km_sil_score = []
 
-    # Create a for loop to find optimal n_clusters
     for n_clusters in range(start, end):
 
         kmeans = KMeans(n_clusters=n_clusters)
