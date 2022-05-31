@@ -18,8 +18,6 @@ import seaborn as sns
 from scipy.stats import skew, norm, probplot
 sns.set_style('darkgrid')
 
-import utils as utils
-
 
 def kmeans_plot_cluster_silscore(dataset, start=2, end=11):
     '''
@@ -77,31 +75,14 @@ def save_last_year_data():
 
 
 def kmeans(df, clusters_number):
-    '''
-    Implement k-means clustering on dataset
-
-    INPUT:
-        dataset : dataframe. Dataset for k-means to fit.
-        clusters_number : int. Number of clusters to form.
-        end : int. Ending range of kmeans to test.
-    OUTPUT:
-        Cluster results and t-SNE visualisation of clusters.
-    '''
-
     kmeans = KMeans(n_clusters=clusters_number, random_state=42)
     kmeans.fit(df)
-
-    # Extract cluster labels
     cluster_labels = kmeans.labels_
-
-    # Create a cluster label column in original dataset
     df_new = df.assign(Cluster=cluster_labels)
-
-    # Initialise TSNE
     model = TSNE(random_state=1)
     transformed = model.fit_transform(df)
 
-    # Plot t-SNE
+    plt.figure(figsize=(16, 16))
     plt.title('Flattened Graph of {} Clusters'.format(clusters_number))
     sns.scatterplot(x=transformed[:, 0], y=transformed[:, 1], hue=cluster_labels, style=cluster_labels, palette="Set1")
 
@@ -178,7 +159,6 @@ if __name__ == '__main__':
         visualizer = SilhouetteVisualizer(model, colors='yellowbrick', ax=axes[n-3])
         visualizer.fit(df_rfm_norm)
     visualizer.show()
-
 
     # for clusters = 3
     df_new, labels = kmeans(df_rfm_norm, 3)
