@@ -22,37 +22,7 @@ import seaborn as sns
 from scipy.stats import skew, norm, probplot
 sns.set_style('darkgrid')
 
-import utils as utils
 ```
-
-
-```python
-!pip install yellowbrick plotly
-```
-
-    Requirement already satisfied: yellowbrick in /opt/conda/lib/python3.9/site-packages (1.4)
-    Collecting plotly
-      Downloading plotly-5.8.0-py2.py3-none-any.whl (15.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m15.2/15.2 MB[0m [31m6.4 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hRequirement already satisfied: scipy>=1.0.0 in /opt/conda/lib/python3.9/site-packages (from yellowbrick) (1.8.0)
-    Requirement already satisfied: cycler>=0.10.0 in /opt/conda/lib/python3.9/site-packages (from yellowbrick) (0.11.0)
-    Requirement already satisfied: numpy>=1.16.0 in /opt/conda/lib/python3.9/site-packages (from yellowbrick) (1.19.5)
-    Requirement already satisfied: matplotlib!=3.0.0,>=2.0.2 in /opt/conda/lib/python3.9/site-packages (from yellowbrick) (3.5.2)
-    Requirement already satisfied: scikit-learn>=1.0.0 in /opt/conda/lib/python3.9/site-packages (from yellowbrick) (1.0.2)
-    Collecting tenacity>=6.2.0
-      Downloading tenacity-8.0.1-py3-none-any.whl (24 kB)
-    Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (21.3)
-    Requirement already satisfied: pillow>=6.2.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (9.1.0)
-    Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (4.33.3)
-    Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (2.8.2)
-    Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (3.0.8)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.9/site-packages (from matplotlib!=3.0.0,>=2.0.2->yellowbrick) (1.4.2)
-    Requirement already satisfied: joblib>=0.11 in /opt/conda/lib/python3.9/site-packages (from scikit-learn>=1.0.0->yellowbrick) (1.1.0)
-    Requirement already satisfied: threadpoolctl>=2.0.0 in /opt/conda/lib/python3.9/site-packages (from scikit-learn>=1.0.0->yellowbrick) (3.1.0)
-    Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib!=3.0.0,>=2.0.2->yellowbrick) (1.15.0)
-    Installing collected packages: tenacity, plotly
-    Successfully installed plotly-5.8.0 tenacity-8.0.1
-
 
 
 ```python
@@ -112,19 +82,6 @@ df_cleaned.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -227,19 +184,7 @@ df_rfm.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -310,19 +255,7 @@ df_rfm_norm.describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -539,23 +472,7 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
