@@ -2,10 +2,9 @@ from math import pi
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, silhouette_score
-from sklearn.preprocessing import LabelEncoder
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-#import lightgbm as lgb
+
 from datetime import date, timedelta
 import plotly.graph_objects as go
 import plotly.offline as pyo
@@ -116,6 +115,7 @@ def plot_radar_demo():
     pyo.plot(fig)
 
 
+"""
 def plot_radar_df(df, feat_cols, label_col, selected_label_list, split_chart=False, dpi=100, n_col=3, fig_h=8, fig_w=8):
     # min-max normalization
     for col in feat_cols:
@@ -141,6 +141,7 @@ def plot_radar_df(df, feat_cols, label_col, selected_label_list, split_chart=Fal
         dpi = 1.5*dpi
 
     lines, labels = plt.thetagrids(np.degrees(label_loc), labels=feat_cols)
+"""
 
 
 if __name__ == '__main__':
@@ -148,12 +149,11 @@ if __name__ == '__main__':
 
     """
     purchases = pd.read_csv(path + "supermarket_purchases.csv")
+    purchases = utils.get_first_chunk(path + "supermarket_purchases.csv", chunksize=100000)
     assert False
     """
 
-    purchases = utils.get_first_chunk(path + "supermarket_purchases.csv", chunksize=100000)
-    #print(purchases.head())
-    #print(purchases.info())
+    purchases = pd.read_csv(path + "supermarket_purchases.csv", delim_whitespace=True)
     tmp = utils.basic_info(purchases)
     assert purchases.isnull().values.any() == False, 'df has null values'
 
@@ -264,8 +264,7 @@ if __name__ == '__main__':
     df_melted = pd.melt(shop_amount, id_vars='cluster', var_name='shop_id', value_name='total')
     print(df.head(10))
     sns.barplot(data=df_melted, x='cluster', y='total', hue='shop_id')
+    plt.savefig('cluster_shop_amount.png')
     plt.show()
 
-    plot_radar_demo()
-
-    print('done')
+    #plot_radar_demo()
