@@ -1,5 +1,5 @@
-from tensorflow.python.keras.preprocessing import sequence
-from tensorflow.keras.preprocessing import text
+from keras.preprocessing import sequence
+from keras.preprocessing import text
 
 
 class TextPreprocessor(object):
