@@ -53,8 +53,6 @@ import openpyxl
 
 ```python
 hr_df = pd.read_csv('data/hr_data.csv', index_col=0) 
-#file_name = "https://raw.githubusercontent.com/rajeevratan84/datascienceforbusiness/master/hr_data.csv"
-#hr_df = pd.read_csv(file_name)
 hr_df.head(10)
 ```
 
@@ -492,10 +490,6 @@ cols
 
 ```python
 emp_satis_eval = pd.read_excel('data/employee_satisfaction_evaluation.xlsx') 
-
-#file_name = "https://raw.githubusercontent.com/rajeevratan84/datascienceforbusiness/master/employee_satisfaction_evaluation.xlsx"
-#emp_satis_eval = pd.read_excel(file_name)
-
 emp_satis_eval.head()
 ```
 
@@ -2283,7 +2277,7 @@ corr
 
 ```python
 corr_cols = ['number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'left', 'promotion_last_5years', 'satisfaction_level', 'last_evaluation']
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(10, 10), dpi=600)
 sns.set(font_scale=0.9)
 hm = sns.heatmap(corr,
                  cbar=True,
