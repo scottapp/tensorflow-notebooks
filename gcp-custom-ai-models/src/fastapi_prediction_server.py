@@ -12,8 +12,8 @@ from pydantic import BaseModel
 from preprocessor import TextPreprocessor
 from model_prediction import CustomModelPrediction
 
-load_dotenv()
 
+load_dotenv()
 BASE_DIR = os.getenv('BASE_DIR')
 assert BASE_DIR, 'error base dir'
 

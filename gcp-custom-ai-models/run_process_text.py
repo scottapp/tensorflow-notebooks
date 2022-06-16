@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.utils import shuffle
 from sklearn.preprocessing import OneHotEncoder
-from keras.preprocessing import sequence
-from keras.preprocessing import text
-import tensorflow as tf
+#from keras.preprocessing import sequence
+#from keras.preprocessing import text
+#import tensorflow as tf
 import pickle
 from preprocessor import TextPreprocessor
 

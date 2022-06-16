@@ -1,0 +1,10 @@
+pytest
+fastapi>=0.66.0
+uvicorn[standard]>=0.14.0
+requests
+pandas
+sklearn
+numpy
+keras==2.8.0
+tensorflow
+python-dotenv

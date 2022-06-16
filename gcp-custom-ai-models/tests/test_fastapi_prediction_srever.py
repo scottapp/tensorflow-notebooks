@@ -1,18 +1,18 @@
-
 from dotenv import load_dotenv
 import os
 import sys
 import json
 import pickle
 
+"""
 load_dotenv()
 BASE_DIR = os.getenv('BASE_DIR')
 assert BASE_DIR, 'error base dir'
 sys.path.append(BASE_DIR)
+"""
 
 import tensorflow as tf
 from fastapi.testclient import TestClient
-from preprocessor import TextPreprocessor
 from model_prediction import CustomModelPrediction
 from fastapi_prediction_server import app
 
