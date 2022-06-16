@@ -18,7 +18,6 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the content of the local src directory to the working directory
-# COPY data ./data
 COPY .env_docker .env
 COPY saved_model ./saved_model
 COPY processor_state.pkl ./processor_state.pkl
