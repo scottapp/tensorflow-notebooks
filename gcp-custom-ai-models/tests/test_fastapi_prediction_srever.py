@@ -89,7 +89,7 @@ def test_prediction_server_webserver():
 
     data = dict()
     data['instances'] = json.dumps(instances)
-    response = client.post("/predict/", json=data)
+    response = client.post("/predict", json=data)
     assert response.status_code == 200
     res_data = json.loads(response.text)
     assert res_data.get('predictions')
