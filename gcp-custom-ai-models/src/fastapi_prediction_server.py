@@ -4,12 +4,12 @@ import pickle
 from dotenv import load_dotenv
 
 import tensorflow as tf
-from typing import Optional
+#from typing import Optional
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from preprocessor import TextPreprocessor
+#from preprocessor import TextPreprocessor
 from model_prediction import CustomModelPrediction
 
 
@@ -59,7 +59,7 @@ async def hello_world_post(item: Item):
     return item
 
 
-@app.post("/predict/")
+@app.post("/predict")
 async def predict(input: PredictionInput):
     try:
         instances = json.loads(input.instances)
