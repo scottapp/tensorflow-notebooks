@@ -2,7 +2,7 @@
 
 The following are the output plots from EDA analysis
 
-For the details please take a look at the script in this repository.
+For details please take a look at the script in this repository.
 
 ![](01_univariate_distribution.png)
 
