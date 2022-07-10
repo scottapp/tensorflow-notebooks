@@ -1,4 +1,4 @@
-![](01_univariate_distribution.png)
+![Distributions](01_univariate_distribution.png)
 ![](02_corr_heapmap.png)
 ![](03_residual_distribution_alcohol.png)
 ![](04_residual_qq_plot_alcohol.png)
