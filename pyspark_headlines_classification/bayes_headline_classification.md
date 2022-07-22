@@ -606,5 +606,4 @@ print("Test Error of NaiveBayes = %g " % (1.0 - nb_accuracy))
 
 ```
 
-* Reference
 * [original notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/5722190290795989/2546946806099472/8175309257345795/latest.html)
