@@ -24,11 +24,9 @@ ENV PYSPARK_PYTHON=/usr/bin/python
 ENV PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
 ENV APP=/app
 
-ENV SHARED_WORKSPACE=/opt/workspace
-RUN mkdir -p ${SHARED_WORKSPACE}
-RUN chown jovyan /opt/workspace
-VOLUME ${SHARED_WORKSPACE}
-WORKDIR ${SHARED_WORKSPACE}
+#ENV SHARED_WORKSPACE=/home/jovyan/shared_workspace
+#RUN mkdir -p ${SHARED_WORKSPACE}
+#RUN chown jovyan /home/jovyan/shared_workspace
 
 # docker build -t jupyter .
 # docker run -it -p 8888:8888 -v %cd%:/home/jovyan/workspace jupyter

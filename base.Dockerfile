@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt-get clean && apt-get update -y
 RUN apt-get install -y python3 python3-pip curl wget unzip procps
