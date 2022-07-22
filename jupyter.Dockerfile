@@ -1,6 +1,5 @@
 FROM mk-spark-base
 
-# Python packages
 RUN pip3 install wget requests pandas numpy datawrangler findspark pyspark==3.3.0
 RUN pip3 install jupyterlab
 

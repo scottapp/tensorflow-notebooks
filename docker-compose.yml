@@ -3,7 +3,7 @@ version: "3.6"
 services:
 
   jupyterlab:
-    image: mk-jupyter
+    image: jupyter
     container_name: mk-jupyter
     ports:
       - 8888:8888
