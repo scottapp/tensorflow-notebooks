@@ -14,6 +14,8 @@ RUN curl https://dlcdn.apache.org/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz 
     mkdir /usr/bin/spark-3.3.0-bin-hadoop3/logs && \
     rm spark.tgz
 
+RUN pip3 install wget requests pandas numpy datawrangler
+
 RUN mkdir -p /tmp/logs/ && chmod a+w /tmp/logs/ && mkdir /app && chmod a+rwx /app && mkdir /data && chmod a+rwx /data
 ENV JAVA_HOME=/usr
 ENV SPARK_HOME=/usr/bin/spark-3.3.0-bin-hadoop3

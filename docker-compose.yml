@@ -36,6 +36,13 @@ services:
     depends_on:
       - spark-master
 
+  demo-database:
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres1234
+
 volumes:
   shared-workspace:
     name: "hadoop-distributed-file-system"
