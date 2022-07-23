@@ -52,5 +52,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # run the following in jupyterlab container via bash
     # spark-submit --master spark://spark-master:7077 --jars data/postgresql-42.2.22.jar main.py
     main()
