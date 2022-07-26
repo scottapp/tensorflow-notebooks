@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 from IPython.display import display
 sns.set_palette("pastel")
 plt.rcParams["figure.figsize"] = (20, 9)
-
 np.random.seed(42)
+
 # ## Examples are from [Introductory Business Statistics](https://openstax.org/books/introductory-business-statistics/pages/9-4-full-hypothesis-test-examples)
 
 # ## Example 9.8
