@@ -14,13 +14,13 @@ plt.rcParams["figure.figsize"] = (20, 9)
 np.random.seed(42)
 ```
 
-## Examples are from [Introductory Business Statistics](https://openstax.org/books/introductory-business-statistics/pages/9-4-full-hypothesis-test-examples)
+# Hypothesis Testing with One Sample<br>
+* Examples are from [Introductory Business Statistics](https://openstax.org/books/introductory-business-statistics/pages/9-4-full-hypothesis-test-examples)
 
-## Example 9.8
+**Example 9.8**
 
-### Method 1
-
-### t statstics
+**Method 1**<br>
+**t statstics**
 
 
 ```python
@@ -32,7 +32,7 @@ print(t_stat)
     -2.081728548586485
 
 
-### critical value for left tailed test
+**critical value for left tailed test**
 
 
 ```python
@@ -43,7 +43,7 @@ print(t_critical)
     -1.7613101357748564
 
 
-### p value
+**p value**
 
 
 ```python
@@ -54,7 +54,7 @@ print(p_value)
     0.028099370183143364
 
 
-### Method 2
+**Method 2**
 
 
 ```python
@@ -86,14 +86,14 @@ plt.show()
 
 
     
-![png](output_14_0.png)
+![png](output_13_0.png)
     
 
 
-## Example 9.9
+**Example 9.9**
 
-### Method 1<br>
-### t statstics
+**Method 1**<br>
+**test statstics**
 
 
 ```python
@@ -104,7 +104,7 @@ print(t_stat)
     2.6666666666666665
 
 
-### critical value for right tailed test
+**critical value for right tailed test**
 
 
 ```python
@@ -115,7 +115,7 @@ print(t_critical)
     1.7530503556925547
 
 
-### p value
+**p value**
 
 
 ```python
@@ -142,15 +142,15 @@ plt.show()
 
 
     
-![png](output_22_0.png)
+![png](output_21_0.png)
     
 
 
-**t_stat is larger than critical value**<br>
-**p_value is smaller than 0.05**<br>
-**Therefore we should reject null hypothesis that H0: mu <= 100**
+* t_stat is larger than critical value<br>
+* p_value is smaller than 0.05<br>
+* Therefore we should reject null hypothesis that H0: mu <= 100
 
-### Method 2
+**Method 2**
 
 
 ```python
@@ -166,10 +166,10 @@ print(t_stat, p_value)
     1.4153029910258041 0.08870276879918516
 
 
-**p_value is smaller than 0.05**<br>
-**we should reject null hypothesis**
+* p_value is smaller than 0.05<br>
+* we should reject null hypothesis
 
-### Confidence Interval
+**Confidence Interval**
 
 
 ```python
@@ -190,7 +190,7 @@ display(f'95% confidence interval is between {lower_ci} to {upper_ci}')
     '95% confidence interval is between 98.38130171760722 to 108.01668625325192'
 
 
-## Example 9.10
+**Example 9.10**
 
 
 ```python
@@ -207,9 +207,50 @@ print(p_value)
     0.0021114910066706333
 
 
-**At 99% significance level the critical value is 2.575**<br>
-**t-test of 3.07 is larger than 2.575**<br>
-**We should reject the null hypothesis that the machine is filling properly at the mean of 8 ounces**<br>
-**The machine will need repair**
+* At 99% significance level the critical value is 2.575<br>
+* t-test of 3.07 is larger than 2.575<br>
+* We should reject the null hypothesis that the machine is filling properly at the mean of 8 ounces<br>
+* The machine will need repair
 
-#
+# Hypothesis Test for Proportions<br>
+**Example 9.11**<br>
+* 1 sample proportion test<br>
+* H0: p = 0.5<br>
+* H1: p != 0.5
+
+
+```python
+n = 100
+p = 0.5
+q = 0.5
+test_stat = (0.53 - 0.5)/np.sqrt((p*q)/n)
+print(test_stat)
+```
+
+    0.6000000000000005
+
+
+
+```python
+critical_value = abs(stats.norm.ppf(0.05/2))
+print(critical_value)
+```
+
+    1.9599639845400545
+
+
+
+```python
+p_value = stats.norm.sf(np.abs(test_stat)) * 2
+print(p_value)
+```
+
+    0.5485062355001469
+
+
+* Test statistics of 0.6 is a lot less than the critical value 1.96<br>
+* p-value of 0.54 does not indicate strong difference of sample estimate from hypothesis<br>
+* We cannot reject the null hypothesis that 50% of first time loan borrower are the same in terms of loan size from other borrowers
+
+# Comparing Two Independent Popluation Means<br>
+[Reference](https://openstax.org/books/introductory-business-statistics/pages/10-1-comparing-two-independent-population-means)
